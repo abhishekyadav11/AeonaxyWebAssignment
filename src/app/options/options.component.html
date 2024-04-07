@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="d-flex mt-md-5 mt-2">
+        <h5 class="ms-md-4 ms-2 mt-2 dribble-txt">dribble</h5>
+        <!-- <img src="../../assets/dribble.png" alt=""> -->
+        <img class="ms-md-4 ms-2 p-md-2 p-1 back" src="../../assets/icons8-back-32.png" alt="" (click)="redirectToProfile()">
+    </div>
+
+    <div class="mt-sm-3 mt-4">
+        <h2 class="fw-bold text-center">What brings you to Dribble ?</h2>
+        <p class="text-secondary text-center mt-4">Select the options that best describe you.Don't worry,you can explore
+            other options later.</p>
+    </div>
+
+
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="row g-4 mt-4">
+            <div class="col-md-4 col-sm-6 col-12" *ngFor="let option of options; let i = index"
+                [ngClass]="{'selected': isSelected(i)}" (click)="toggleSelection(i)">
+                <div class="content-border p-3">
+                    <div class="text-center mb-3">
+                        <img [src]="option.img" alt="" class="option">
+                    </div>
+                    <div class="text-center fw-bold">
+                        <span *ngFor="let part of option.titleParts; let isLast = last">{{ part }}<br
+                                *ngIf="!isLast"></span>
+                    </div>
+                    <p class="text-center" *ngIf="isSelected(i)">
+                        With over 7 million shots from a vast <br> community of designers,
+                        Dribble is <br> the leading source for design inspiration.
+                    </p>
+                    <div class="text-center">
+                        <i class="bi" [ngClass]="{'bi-check-circle': isSelected(i), 'bi-circle': !isSelected(i), 'text-pink': isSelected(i)}"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <h6 class="fw-bold">Anything else ? You can select multiple</h6>
+        <button type="submit" class="btn ps-md-5 ps-sm-4 pe-md-5 pe-sm-4 mt-3" [disabled]="selectedIndices.length === 0" (click)="redirectToEmail()">Finish</button>
+        <p class="text-secondary fw-bold mt-2 txt-footer">Or Press RETURN</p>
+    </div>
+</div>

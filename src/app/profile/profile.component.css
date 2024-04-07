@@ -1,0 +1,61 @@
+.circle{
+    width: 150px;
+    height: 150px;
+    border: 2px dashed gray;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dribble-txt{
+    color: #ea4b8b;
+}
+
+form{
+    width: 90%;
+}
+
+img{
+    color: gray;
+}
+
+button{
+    background-color: #ea4b8b;
+    border: none;
+    color: #fff;
+}
+
+button:disabled{
+    background-color: #ea4b8b;
+    color: #fff;
+}
+
+.location{
+    border: none;
+    border-bottom: 1px solid #3b3b3b;
+    border-radius: 0;
+    outline: none;
+    width: 60%;
+}
+
+.location:focus {
+    border-color: #ced4da; 
+    box-shadow: none; 
+}
+
+.cover-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensure the image covers the entire container while maintaining aspect ratio */
+  }
+
+  @media (max-width: 768px) {
+    .col-md-3,.col-md-9{
+        display: flex;
+        justify-content: center;
+    }
+
+    .d-flex{
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+}

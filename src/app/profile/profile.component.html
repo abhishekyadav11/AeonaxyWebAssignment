@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Column 1: Image -->
+        <div class="col-md-3 position-relative">
+            <div class="position-absolute">
+                <p class="mt-sm-2 dribble-txt">dribble</p>
+            </div>
+        </div>
+        <!-- Column 2: Login Fields -->
+        <div class="col-md-9">
+            <!-- Create Account Section -->
+
+            <div class="mt-4">
+                <form class="mx-auto mt-5">
+                    <h2 class="mb-2 fw-bold">Welcome! Let's create your profile</h2>
+
+                    <p class="mb-4">Let others get to know you better! You can do these later</p>
+                    <div class="d-flex justify-content-between mb-md-5">
+                        <div class="form-group w-75 mt-4">
+                            <label for="newName" class="mb-2 fw-semibold">Add an avatar</label>
+                            <div class="d-flex mt-2">
+                                <div class="circle d-flex justify-content-center align-items-center position-relative">
+                                    <!-- Display selected image or default image -->
+                                    <img *ngIf="selectedImage" [src]="selectedImage" alt="Selected Image"
+                                        class="position-absolute cover-image" />
+                                    <div class="position-absolute" *ngIf="!selectedImage">
+                                        <img src="../../assets/icons8-add-camera-32.png" alt="Default Image">
+                                    </div>
+                                </div>
+                                <div class="mb-3 ms-md-4 mt-4">
+                                    <!-- File input to choose an image -->
+                                    <input class="form-control" type="file" id="formFile"
+                                        (change)="onFileSelected($event)">
+                                    <p class="mt-4"> > Or choose one of our defaults</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4 mt-md-4">
+                        <div class="form-group">
+                            <label for="location" class="mb-2 fw-semibold">Add your location</label>
+                            <input type="text" class="form-control location" id="location"
+                                placeholder="Enter a location" [(ngModel)]="location" [ngModelOptions]="{standalone: true}" (input)="toggleButton()">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn mt-md-4 ps-5 pe-5 mb-sm-3"
+                        [disabled]="!selectedImage || !location" id="submitButton" (click)="redirectToOptions()">Next</button>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

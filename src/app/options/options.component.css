@@ -1,0 +1,78 @@
+
+
+.content-border {
+    border: 1px solid #dee2e6; /* Bootstrap's border color for light theme */
+    padding: 20px; /* Adds padding inside the divs */
+    background-color: #fff; /* Optional: in case you have a background for the row or container */
+}
+
+.dribble-txt{
+    color: #ea4b8b;
+}
+
+.option
+{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.back{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin-top: 1%;
+    background-color: #f2f2f2;
+}
+
+button{
+    background-color: #ea4b8b;
+    border: none;
+    color: #fff;
+    width: 15%;
+}
+
+.content-border::selection{
+    border:  2px solid #ea4b8b;
+}
+
+.row{
+    cursor: pointer;
+}
+
+.text-pink {
+    /* background: #ea4b8b; */
+    color: #ea4b8b;
+}
+
+button:disabled{
+    background-color: #ea4b8b;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    button{
+        width: 25%;
+    }
+
+    .dribble-txt{
+        margin-right: 1rem;
+    }
+
+    .txt-footer{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .option
+    {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .back{
+        margin-top: 2%;
+    }
+}

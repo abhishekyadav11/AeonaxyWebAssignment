@@ -1,0 +1,48 @@
+button{
+    background-color: #ea4b8b;
+    border: none;
+    color: #fff;
+}
+
+.dribble-txt{
+    color: #ea4b8b;
+}
+
+.navbar-brand{
+    color: #000;
+}
+
+a{
+    color: #000;
+}
+
+.row{
+    background-color: #fafafa;
+    height: auto;
+}
+
+@media (max-width: 576px) {
+    .col-md-2 p{
+        font-size: 20px;
+    }
+
+    .footer{
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-2 p{
+        font-size: 24px;
+    }
+
+    .col-md-3{
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-md-2 p{
+        font-size: 14px;
+    }
+}

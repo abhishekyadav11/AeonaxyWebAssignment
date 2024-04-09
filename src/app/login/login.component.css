@@ -11,13 +11,13 @@
     background-color: #f2d184;
 }
 
-button{
+.button{
     background-color: #ea4b8b;
     border: none;
     color: #fff;
 }
 
-button:hover{
+.button:hover{
     background-color: #ea4b8b;
     color: #fff;
 }

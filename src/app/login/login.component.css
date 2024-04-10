@@ -30,6 +30,10 @@ input{
     background-color: #f3f3f3;
 }
 
+.username{
+    margin-left: 1rem;
+}
+
 @media (max-width: 768px) {
 
     .col-md-5{
@@ -57,6 +61,7 @@ input{
 @media (max-width: 992px) {
 
     .username{
+        margin-left: 0px;
         margin-top: 1rem;
     }
 
